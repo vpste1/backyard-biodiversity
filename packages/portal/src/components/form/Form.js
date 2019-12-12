@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FIELDS from "~/common/resources/fields";
+import FIELDS from "common/resources/fields";
 
 function Form() {
   const [formPage, setFormPage] = useState(0);
