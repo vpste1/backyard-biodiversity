@@ -1,0 +1,29 @@
+@import "../assets/styles/index";
+
+.login__container {
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  padding: 80px;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  h1 {
+    margin-bottom: 24px;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.login__input {
+  margin-bottom: 8px;
+}
+
+.login__btn {
+  margin-top: 16px;
+}

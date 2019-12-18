@@ -12,10 +12,19 @@ function Form() {
   });
 
   return (
-    <div>
-      <p>You clicked {formPage} times</p>
-      <button onClick={() => setFormPage(formPage + 1)}>Click me</button>
-    </div>
+    <form>
+      <label>
+        Enter your postcode
+        <input
+          type="text"
+          value={formData.postcode}
+          onChange={event =>
+            setFormData({ ...formData, postcode: event.target.value })
+          }
+        />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
   );
 }
 

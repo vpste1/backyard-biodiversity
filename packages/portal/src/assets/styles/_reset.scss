@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+  // font-size: $fontSizeBase;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  // font-family: $fontFamilyBase;
+}
+
+// input,
+// textarea,
+// select,
+// button {
+//   font-family: $fontFamilyBase;
+// }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
