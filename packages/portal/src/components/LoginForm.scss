@@ -2,9 +2,9 @@
 
 .login__container {
   width: 400px;
-  height: 500px;
+
   background-color: #fff;
-  padding: 80px;
+  padding: 20px;
   box-sizing: border-box;
   border-radius: 4px;
 
@@ -13,11 +13,22 @@
   }
 }
 
+.login__logo {
+  text-align: center;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.login__body {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
 .login__form {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
-  margin: 0 auto;
 }
 
 .login__input {
@@ -25,5 +36,5 @@
 }
 
 .login__btn {
-  margin-top: 16px;
+  margin: 16px 0 40px;
 }

@@ -1,0 +1,9 @@
+.btn {
+  background-color: $bbRed;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  &:hover {
+    background-color: $bbDarkRed;
+  }
+}
