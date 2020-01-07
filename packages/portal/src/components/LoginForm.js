@@ -4,11 +4,18 @@ import "./LoginForm.scss";
 
 import logo from "../assets/images/logo_128.png";
 
-function LoginForm() {
+function LoginForm({ onSubmit }) {
   const [formData, setFormData] = useState({
     username: "",
     password: ""
   });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const { username, password } = event.target.elements;
+
+    onSubmit(formData);
+  }
 
   return (
     <div className="login__container">
@@ -17,7 +24,7 @@ function LoginForm() {
       </div>
       <div className="login__body">
         <h1>Login</h1>
-        <form className="login__form">
+        <form className="login__form" onSubmit={handleSubmit}>
           <input
             type="text"
             className="login__input"
