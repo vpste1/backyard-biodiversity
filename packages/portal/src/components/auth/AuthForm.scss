@@ -1,6 +1,6 @@
-@import "../assets/styles/index";
+@import "../../assets/styles/index";
 
-.login__container {
+.auth__container {
   width: 400px;
 
   background-color: #fff;
@@ -13,7 +13,7 @@
   }
 }
 
-.login__logo {
+.auth__logo {
   text-align: center;
   img {
     height: 100px;
@@ -21,20 +21,20 @@
   }
 }
 
-.login__body {
+.auth__body {
   margin: 0 auto;
   max-width: 320px;
 }
 
-.login__form {
+.auth__form {
   display: flex;
   flex-direction: column;
 }
 
-.login__input {
+.auth__input {
   margin-bottom: 8px;
 }
 
-.login__btn {
+.auth__btn {
   margin: 16px 0 40px;
 }

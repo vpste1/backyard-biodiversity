@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import FIELDS from "common/resources/fields";
-import "./LoginForm.scss";
+import "./AuthForm.scss";
 
-import logo from "../assets/images/logo_128.png";
+import logo from "../../assets/images/logo_128.png";
 
 function LoginForm({ onSubmit }) {
   const [formData, setFormData] = useState({
@@ -12,22 +11,20 @@ function LoginForm({ onSubmit }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const { username, password } = event.target.elements;
-
     onSubmit(formData);
   }
 
   return (
-    <div className="login__container">
-      <div className="login__logo">
+    <div className="auth__container">
+      <div className="auth__logo">
         <img src={logo} />
       </div>
-      <div className="login__body">
+      <div className="auth__body">
         <h1>Login</h1>
-        <form className="login__form" onSubmit={handleSubmit}>
+        <form className="auth__form" onSubmit={handleSubmit}>
           <input
             type="text"
-            className="login__input"
+            className="auth__input"
             placeholder="Email"
             value={formData.username}
             onChange={event =>
@@ -36,14 +33,14 @@ function LoginForm({ onSubmit }) {
           />
           <input
             type="password"
-            className="login__input"
+            className="auth__input"
             placeholder="Password"
             value={formData.password}
             onChange={event =>
               setFormData({ ...formData, password: event.target.value })
             }
           />
-          <input className="btn login__btn" type="submit" value="Login" />
+          <input className="btn auth__btn" type="submit" value="Login" />
         </form>
       </div>
     </div>

@@ -5,9 +5,23 @@ const AuthContext = React.createContext();
 
 function AuthProvider(props) {
   const login = form => amplifyService.signIn(form);
+  const signUp = form =>
+    amplifyService.signUp({
+      username: form.username,
+      password: form.password,
+      attributes: { given_name: form.givenName, family_name: form.familyName }
+    });
+  const verify = (username, code) =>
+    amplifyService.confirmSignUp(username, code);
+
   const logout = () => amplifyService.signOut();
 
-  return <AuthContext.Provider value={{ login, logout }} {...props} />;
+  return (
+    <AuthContext.Provider
+      value={{ login, signUp, logout, verify }}
+      {...props}
+    />
+  );
 }
 
 function useAuth() {
