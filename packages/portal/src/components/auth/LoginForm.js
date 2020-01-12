@@ -22,18 +22,28 @@ function LoginForm({ onSubmit }) {
       <div className="auth__body">
         <h1>Login</h1>
         <form className="auth__form" onSubmit={handleSubmit}>
+          <label for="email" class="hidden">
+            Email
+          </label>
           <input
             type="text"
+            name="email"
             className="auth__input"
+            autoComplete="email"
             placeholder="Email"
             value={formData.username}
             onChange={event =>
               setFormData({ ...formData, username: event.target.value })
             }
           />
+          <label for="password" class="hidden">
+            Password
+          </label>
           <input
             type="password"
+            name="password"
             className="auth__input"
+            autoComplete="password"
             placeholder="Password"
             value={formData.password}
             onChange={event =>

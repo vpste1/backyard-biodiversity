@@ -21,8 +21,14 @@ function VerifyForm({ onSubmit }) {
       <div className="auth__body">
         <h1>Confirm email</h1>
         <form className="auth__form" onSubmit={handleSubmit}>
+          <label for="code" class="hidden">
+            Confirmation code
+          </label>
           <input
             type="text"
+            name="code"
+            inputMode="numeric"
+            autoComplete="one-time-code"
             className="auth__input"
             placeholder="Confirmation code"
             value={formData.confirmationCode}
