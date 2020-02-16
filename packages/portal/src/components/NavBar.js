@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./NavBar.module.scss";
 import { useAuth0 } from "../context/authContext";
 import { Link } from "react-router-dom";
 
@@ -8,10 +9,18 @@ const NavBar = () => {
   return (
     <div>
       {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect({})}>Log in</button>
+        <button
+          className={`btn ${styles.authButton}`}
+          onClick={() => loginWithRedirect({})}
+        >
+          Log in / Sign up
+        </button>
       )}
-
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+      {isAuthenticated && (
+        <button className={`btn ${styles.authButton}`} onClick={() => logout()}>
+          Log out
+        </button>
+      )}
       {isAuthenticated && (
         <span>
           <Link to="/">Home</Link>&nbsp;

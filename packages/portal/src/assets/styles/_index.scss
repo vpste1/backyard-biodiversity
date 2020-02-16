@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-weight: 400;
   color: $fontGrey;
   background-color: $lightBackground;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,11 +12,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 input {
@@ -30,4 +26,11 @@ input {
 input[type="text"]::-ms-clear,
 input[type="password"]::-ms-reveal {
   display: none;
+}
+
+.inner-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.2em;
 }
