@@ -1,11 +1,16 @@
 html {
-  height: 100%;
   // font-size: $fontSizeBase;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   // font-family: $fontFamilyBase;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
 }
 
 // input,

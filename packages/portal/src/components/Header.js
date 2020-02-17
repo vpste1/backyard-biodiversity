@@ -1,17 +1,20 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <div className="inner-wrapper">
         <div className={styles.container}>
-          <img
-            alt="backyard-bio-logo"
-            className={styles.logo}
-            src={require("../assets/images/logo_128.png")}
-          />
+          <Link to="/">
+            <img
+              alt="backyard-bio-logo"
+              className={styles.logo}
+              src={require("../assets/images/logo_128.png")}
+            />
+          </Link>
           <h1>Backyard Biodiversity</h1>
           <NavBar />
         </div>

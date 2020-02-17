@@ -13,7 +13,15 @@ const NavBar = () => {
           className={`btn ${styles.authButton}`}
           onClick={() => loginWithRedirect({})}
         >
-          Log in / Sign up
+          Log in
+        </button>
+      )}
+      {!isAuthenticated && (
+        <button
+          className={`btn ${styles.authButton}`}
+          onClick={() => loginWithRedirect({})}
+        >
+          Sign up
         </button>
       )}
       {isAuthenticated && (
@@ -23,8 +31,13 @@ const NavBar = () => {
       )}
       {isAuthenticated && (
         <span>
-          <Link to="/">Home</Link>&nbsp;
-          <Link to="/profile">Profile</Link>
+          <Link className={`btn ${styles.authButton}`} to="/">
+            Home
+          </Link>
+          &nbsp;
+          <Link className={`btn ${styles.authButton}`} to="/profile">
+            Profile
+          </Link>
         </span>
       )}
     </div>

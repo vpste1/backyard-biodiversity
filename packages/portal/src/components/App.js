@@ -10,10 +10,14 @@ function App() {
     <div className="App">
       <Router history={history}>
         <Header />
-        <Switch>
-          <Route path="/" exact />
-          <PrivateRoute path="/profile" component={Profile} />
-        </Switch>
+        <div className="content">
+          <div className="inner-wrapper">
+            <Switch>
+              <Route path="/" exact />
+              <PrivateRoute path="/profile" component={Profile} />
+            </Switch>
+          </div>
+        </div>
       </Router>
     </div>
   );
