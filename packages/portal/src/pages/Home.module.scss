@@ -1,0 +1,61 @@
+@import "../assets/styles/index";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroBar {
+  width: 100%;
+  background-color: $lightBackground;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  svg {
+    margin: 1em auto 1em;
+  }
+
+  p {
+    margin-top: 1em;
+    max-width: 40em;
+  }
+}
+
+.textBox {
+  margin: 5em 0 5em;
+  background-color: white;
+  border-radius: 4px;
+  padding: 1em;
+
+  &.left {
+    align-self: start;
+  }
+
+  &.right {
+    align-self: flex-end;
+  }
+}
+
+.centeredText {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 0 auto 2em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  margin: 1em 0 1em;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin: 0 0 2em;
+}
+
+p {
+  font-size: 1.5em;
+}

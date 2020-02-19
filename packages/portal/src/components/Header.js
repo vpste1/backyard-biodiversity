@@ -15,7 +15,6 @@ const Header = () => {
               src={require("../assets/images/logo_128.png")}
             />
           </Link>
-          <h1>Backyard Biodiversity</h1>
           <NavBar />
         </div>
       </div>

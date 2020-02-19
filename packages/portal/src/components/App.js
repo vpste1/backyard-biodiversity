@@ -1,5 +1,6 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
+import Home from "../pages/Home";
 import Profile from "./Profile";
 import PrivateRoute from "./PrivateRoute";
 import Header from "./Header";
@@ -11,12 +12,10 @@ function App() {
       <Router history={history}>
         <Header />
         <div className="content">
-          <div className="inner-wrapper">
-            <Switch>
-              <Route path="/" exact />
-              <PrivateRoute path="/profile" component={Profile} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <PrivateRoute path="/profile" component={Profile} />
+          </Switch>
         </div>
       </Router>
     </div>
