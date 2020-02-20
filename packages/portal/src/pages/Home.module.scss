@@ -6,6 +6,18 @@
   align-items: center;
 }
 
+.body {
+  padding: 5em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgGrid,
+.imgHero {
+  margin: 1em auto 1em;
+}
+
 .heroBar {
   width: 100%;
   background-color: $lightBackground;
@@ -13,10 +25,6 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-
-  svg {
-    margin: 1em auto 1em;
-  }
 
   p {
     margin-top: 1em;
@@ -30,6 +38,11 @@
   border-radius: 4px;
   padding: 1em;
 
+  h2 {
+    font-size: 2.2em;
+    margin: 0 0 2em;
+  }
+
   &.left {
     align-self: start;
   }
@@ -39,10 +52,30 @@
   }
 }
 
-.centeredText {
-  font-size: 1.8em;
-  text-align: center;
+.definition {
+  font-size: 1.2em;
   margin: 0 auto 2em;
+  padding: 1em;
+  max-width: 35em;
+
+  .italicised {
+    display: block;
+    font-style: italic;
+  }
+
+  .numberedItem {
+    position: relative;
+    padding-left: 1em;
+    display: block;
+    span {
+      position: relative;
+    }
+    &::before {
+      position: absolute;
+      content: "1. ";
+      left: 0px;
+    }
+  }
 }
 
 h1 {
@@ -51,11 +84,26 @@ h1 {
   margin: 1em 0 1em;
 }
 
-h2 {
-  font-size: 2.2em;
-  margin: 0 0 2em;
-}
-
 p {
   font-size: 1.5em;
+}
+
+@media (max-width: $widthTablet) {
+  h1 {
+    font-size: 3em;
+    margin: 0.5em 0 0.5em;
+  }
+
+  .definition {
+    h2 {
+      font-size: 1.5em;
+    }
+    font-size: 1em;
+    max-width: 35em;
+  }
+  .imgGrid,
+  .imgHero {
+    margin: 0 auto;
+    width: 30em;
+  }
 }

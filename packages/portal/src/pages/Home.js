@@ -9,14 +9,20 @@ const HomePage = () => {
     <main className={styles.container}>
       <div className={styles.heroBar}>
         <h1>Backyard Biodiversity</h1>
-        <Hero />
-        <p className={styles.centeredText}>
-          Biodiversity is the word used to describe the Earth’s various numbers
-          of species, including plants, animals, and microorganisms.
-        </p>
+        <Hero className={styles.imgHero} />
+        <div className={styles.definition}>
+          <h2>Biodiversity</h2>
+          <span className={styles.italicised}>noun</span>
+          <span className={styles.numberedItem}>
+            <span>
+              The Earth’s various numbers of species, including plants, animals,
+              and microorganisms.
+            </span>
+          </span>
+        </div>
       </div>
       <div className={styles.body}>
-        <ColourGrid />
+        <ColourGrid className={styles.imgGrid} />
         <div className="inner-wrapper">
           <div className={`${styles.textBox} ${styles.left}`}>
             <h2>Why it's important</h2>
