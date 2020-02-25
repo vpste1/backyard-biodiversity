@@ -7,15 +7,17 @@
 }
 
 .body {
-  padding: 5em 0;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
-.imgGrid,
-.imgHero {
+.imgSmall,
+.imgLarge {
   margin: 1em auto 1em;
+}
+
+.imgSmall {
+  width: 25em;
 }
 
 .heroBar {
@@ -33,22 +35,13 @@
 }
 
 .textBox {
-  margin: 5em 0 5em;
-  background-color: white;
-  border-radius: 4px;
-  padding: 1em;
+  padding: 5em 1em;
+  background-color: $lightBackground;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.18);
 
   h2 {
     font-size: 2.2em;
     margin: 0 0 2em;
-  }
-
-  &.left {
-    align-self: start;
-  }
-
-  &.right {
-    align-self: flex-end;
   }
 }
 
@@ -94,6 +87,18 @@ p {
     margin: 0.5em 0 0.5em;
   }
 
+  .body {
+    font-size: 0.8em;
+  }
+
+  .textBox {
+    padding: 3em 1em;
+
+    h2 {
+      margin: 0 0 1em;
+    }
+  }
+
   .definition {
     h2 {
       font-size: 1.5em;
@@ -101,9 +106,14 @@ p {
     font-size: 1em;
     max-width: 35em;
   }
-  .imgGrid,
-  .imgHero {
+  .imgLarge,
+  .imgSmall {
     margin: 0 auto;
+  }
+  .imgLarge {
     width: 30em;
+  }
+  .imgSmall {
+    width: 20em;
   }
 }

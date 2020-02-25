@@ -3,13 +3,15 @@ import styles from "./Home.module.scss";
 
 import { ReactComponent as Hero } from "../assets/images/hero.svg";
 import { ReactComponent as ColourGrid } from "../assets/images/colourGrid.svg";
+import { ReactComponent as Bird } from "../assets/images/bird1.svg";
+import { ReactComponent as Bug } from "../assets/images/bug1.svg";
 
 const HomePage = () => {
   return (
     <main className={styles.container}>
       <div className={styles.heroBar}>
         <h1>Backyard Biodiversity</h1>
-        <Hero className={styles.imgHero} />
+        <Hero className={styles.imgLarge} />
         <div className={styles.definition}>
           <h2>Biodiversity</h2>
           <span className={styles.italicised}>noun</span>
@@ -22,9 +24,9 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.body}>
-        <ColourGrid className={styles.imgGrid} />
-        <div className="inner-wrapper">
-          <div className={`${styles.textBox} ${styles.left}`}>
+        <ColourGrid className={styles.imgLarge} />
+        <div className={`${styles.textBox}`}>
+          <div className="inner-wrapper">
             <h2>Why it's important</h2>
             <p>
               Biodiversity facilitates healthy ecosystems, and healthy
@@ -38,7 +40,10 @@ const HomePage = () => {
               that we rely on are losing their homes.
             </p>
           </div>
-          <div className={`${styles.textBox} ${styles.right}`}>
+        </div>
+        <Bird className={styles.imgSmall} />
+        <div className={`${styles.textBox}`}>
+          <div className="inner-wrapper">
             <h2>Backyard biodiversity</h2>
             <p>
               Biodiversity can do great things in your backyard!
@@ -50,6 +55,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
+        <Bug className={styles.imgSmall} />
       </div>
     </main>
   );
